@@ -45,7 +45,7 @@ const SignUpForm = () => {
 
 
         } catch(error){
-            if(error.code == 'auth/email-already-in-use') {
+            if(error.code === 'auth/email-already-in-use') {
                 alert("cannot create user, email already in use");
                         }
             console.log("user creation encountered an error", error);
@@ -73,8 +73,8 @@ const SignUpForm = () => {
                 type="text" 
                 required 
                 onChange={handleChange} 
-                name="email" 
-                value={email} />
+                name="displayName" 
+                value={displayName} />
 
                 <FormInput 
                 label="Email"
@@ -107,3 +107,5 @@ const SignUpForm = () => {
 
 
 export default SignUpForm;
+
+  
