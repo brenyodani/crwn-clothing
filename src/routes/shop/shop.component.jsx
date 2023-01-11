@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import SHOP_DATA from '../../shop-data.json';
+import SHOP_DATA from '../../shop-data.js';
 import { ProductContext } from '../../contexts/products.contexts';
 import ProductCard from '../../components/product-card/product-card.component';
 import './shop.styles.scss';
