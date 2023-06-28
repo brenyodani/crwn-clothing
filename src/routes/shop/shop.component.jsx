@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-
+import { CategoriesProvider } from '../../contexts/categories.contexts';
 import CategoriesPreview from '../categories-preview/categories-preview.component';
 import Category from '../category/category.component';
 
@@ -10,10 +10,12 @@ const Shop = () => {
 
 
     return (
-      <Routes>
-        <Route index element={ <CategoriesPreview /> } />
-        <Route path=':category' element={ <Category /> } />
+      <CategoriesProvider>
+        <Routes>
+          <Route index element={ <CategoriesPreview /> } />
+          <Route path=':category' element={ <Category /> } />
         </Routes>
+      </CategoriesProvider>
     );
 };
 
