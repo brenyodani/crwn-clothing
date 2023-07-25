@@ -1,7 +1,9 @@
 
 import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import  { NavigationContainer, NavLinks, NavLink,LogoContainer } from './navigation.styles.jsx';
+import { useSelector } from "react-redux";
+
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropDown from '../../components/cart-dropdown/cart-dropdown.component';
